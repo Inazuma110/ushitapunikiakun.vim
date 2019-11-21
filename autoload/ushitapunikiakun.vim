@@ -11,18 +11,23 @@ let s:save_cpo = &cpo
 set cpo&vim
 
 " script
-function! ushitapunikiakun#insert() abort
-  let l:source_code = execute('!cat %')
-  let char_len = strlen(l:source_code)
-  for s:i in range(char_len)
-    echon l:source_code[s:i]
-    if l:source_code[s:i] != '\n'
-      echon g:insert_char
-    endif
+function! ushitapunikiakun#run() abort
+  let l:source_code_list = getline(0, '$')
+  if(len(source_code_list) == 1 && source_code_list[0] == '')
+    call setline(1, 'う　し　た　ぷ　に　き　あ　く　ん　笑')
+    unlet source_code_list
+    return
+  endif
+
+  for s:lnum in range(len(l:source_code_list))
+    let l:newline = ''
+    for s:cnum in range(strlen(l:source_code_list[s:lnum]))
+      let l:newline = l:newline . l:source_code_list[s:lnum][s:cnum] . g:insert_char
+    endfor
+    call setline(s:lnum + 1, l:newline)
   endfor
-
+  unlet l:source_code_list
 endfunction
-
 
 " user setting valid
 let &cpo = s:save_cpo

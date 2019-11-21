@@ -12,7 +12,7 @@ set cpo&vim
 
 " script
 
-command! Ushitapunikiakun :call ushitapunikiakun#insert()
+command! Ushitapunikiakun :call ushitapunikiakun#run()
 " command! Trance :call air#to_transparent()
 " command! Nontrace :call air#to_no_transparent()
 
