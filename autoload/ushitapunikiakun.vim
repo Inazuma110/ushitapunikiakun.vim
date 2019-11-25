@@ -13,9 +13,8 @@ set cpo&vim
 " script
 function! ushitapunikiakun#run() abort
   let l:source_code_list = getline(0, '$')
-  if(len(source_code_list) == 1 && source_code_list[0] == '')
+  if(len(l:source_code_list) == 1 && l:source_code_list[0] == '')
     call setline(1, 'う　し　た　ぷ　に　き　あ　く　ん　笑')
-    unlet source_code_list
     return
   endif
 
