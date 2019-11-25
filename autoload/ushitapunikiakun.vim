@@ -19,11 +19,7 @@ function! ushitapunikiakun#run() abort
     return
   endif
 
-  for l:lnum in range(len(l:source_code_list))
-    let l:newline = substitute(l:source_code_list[l:lnum], '\(.\)', '\1' . g:ushitapunikiakun#insert_char, 'g')
-    call setline(l:lnum + 1, l:newline)
-    " %s/\(.\)/\1 . (g:ushitapunikiakun#insert_char)/g
-  endfor
+  %s/\(.\)/\=submatch(1) . g:ushitapunikiakun#insert_char/g
 endfunction
 
 " user setting valid
