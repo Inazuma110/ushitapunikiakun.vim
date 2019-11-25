@@ -11,8 +11,7 @@ let s:save_cpo = &cpo
 set cpo&vim
 
 " script
-
-command! Ushitapunikiakun :call ushitapunikiakun#run()
+command! Ushitapunikiakun call ushitapunikiakun#run()
 
 " user setting valid
 let &cpo = s:save_cpo
