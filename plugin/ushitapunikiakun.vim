@@ -13,8 +13,6 @@ set cpo&vim
 " script
 
 command! Ushitapunikiakun :call ushitapunikiakun#run()
-" command! Trance :call air#to_transparent()
-" command! Nontrace :call air#to_no_transparent()
 
 " user setting valid
 let &cpo = s:save_cpo

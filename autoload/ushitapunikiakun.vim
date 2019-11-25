@@ -4,7 +4,7 @@ scriptencoding utf-8
 if !exists('g:loaded_air')
   finish
 endif
-let g:insert_char = '　'
+let g:ushitapunikiakun#insert_char = '　'
 
 "user settings invalid
 let s:save_cpo = &cpo
@@ -22,7 +22,7 @@ function! ushitapunikiakun#run() abort
   for s:lnum in range(len(l:source_code_list))
     let l:newline = ''
     for s:cnum in range(strlen(l:source_code_list[s:lnum]))
-      let l:newline = l:newline . l:source_code_list[s:lnum][s:cnum] . g:insert_char
+      let l:newline = l:newline . l:source_code_list[s:lnum][s:cnum] . g:ushitapunikiakun#insert_char
     endfor
     call setline(s:lnum + 1, l:newline)
   endfor
