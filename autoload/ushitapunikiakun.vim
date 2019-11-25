@@ -19,14 +19,11 @@ function! ushitapunikiakun#run() abort
     return
   endif
 
-  for s:lnum in range(len(l:source_code_list))
-    let l:newline = ''
-    for s:cnum in range(strlen(l:source_code_list[s:lnum]))
-      let l:newline = l:newline . l:source_code_list[s:lnum][s:cnum] . g:ushitapunikiakun#insert_char
-    endfor
-    call setline(s:lnum + 1, l:newline)
+  for l:lnum in range(len(l:source_code_list))
+    let l:newline = substitute(l:source_code_list[l:lnum], '\(.\)', '\1' . g:ushitapunikiakun#insert_char, 'g')
+    call setline(l:lnum + 1, l:newline)
+    " %s/\(.\)/\1 . (g:ushitapunikiakun#insert_char)/g
   endfor
-  unlet l:source_code_list
 endfunction
 
 " user setting valid
