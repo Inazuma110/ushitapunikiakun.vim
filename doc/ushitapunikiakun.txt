@@ -34,9 +34,21 @@ FUNCTION					*ushitapunikiakun-function*
 						*ushitapunikiakun#run()*
 ushitapunikiakun#run()
 		Insert g:ushitapunikiakun#insert_char (default is full width
+		space) between current line string.
+		Note: If string is empty, insert
+		'う　し　た　ぷ　に　き　あ　く　ん　笑' on current line.
+
+						*ushitapunikiakun#all()*
+ushitapunikiakun#all()
+		Insert g:ushitapunikiakun#insert_char (default is full width
 		space) between current buffer string.
 		Note: If string is empty, insert
-		'う　し　た　ぷ　に　き　あ　く　ん　笑' into current buffer.
+		'う　し　た　ぷ　に　き　あ　く　ん　笑' on current buffer.
+
+					*ushitapunikiakun#set_ushitapunikiakun()*
+ushitapunikiakun#set_ushitapunikiakun()
+		Insert "う　し　た　ぷ　に　き　あ　く　ん　笑" on current
+		line.
 
 ==============================================================================
 FREQUENCY ASKED QUESTIONS				*ushitapunikiakun-faq*
