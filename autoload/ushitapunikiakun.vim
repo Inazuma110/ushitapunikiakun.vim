@@ -11,10 +11,26 @@ let s:save_cpo = &cpo
 set cpo&vim
 
 " script
+
+function! ushitapunikiakun#set_ushitapunikiakun() abort
+  call setline('.', 'う　し　た　ぷ　に　き　あ　く　ん　笑')
+endfunction
+
 function! ushitapunikiakun#run() abort
+  let l:line = getline('.')
+  if(l:line == '')
+    call ushitapunikiakun#set_ushitapunikiakun()
+    return
+  endif
+
+  let l:line = substitute(l:line, '\(.\)', '\1' . g:ushitapunikiakun#insert_char, 'g')
+  call setline(line('.'), l:line)
+endfunction
+
+function! ushitapunikiakun#all() abort
   let l:source_code_list = getline(0, '$')
   if(len(l:source_code_list) == 1 && l:source_code_list[0] == '')
-    call setline(1, 'う　し　た　ぷ　に　き　あ　く　ん　笑')
+    call ushitapunikiakun#set_ushitapunikiakun()
     return
   endif
 
