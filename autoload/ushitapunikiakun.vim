@@ -12,14 +12,14 @@ set cpo&vim
 
 " script
 
-function! ushitapunikiakun#set_ushitapunikiakun() abort
-  call setline('.', 'う　し　た　ぷ　に　き　あ　く　ん　笑')
+function! ushitapunikiakun#set_ushitapunikiakun(lnum) abort
+  call setline(a:lnum, 'う　し　た　ぷ　に　き　あ　く　ん　笑')
 endfunction
 
 function! ushitapunikiakun#run() abort
   let l:line = getline('.')
   if(l:line == '')
-    call ushitapunikiakun#set_ushitapunikiakun()
+    call ushitapunikiakun#set_ushitapunikiakun(line('.'))
     return
   endif
 
@@ -30,7 +30,7 @@ endfunction
 function! ushitapunikiakun#all() abort
   let l:source_code_list = getline(0, '$')
   if(len(l:source_code_list) == 1 && l:source_code_list[0] == '')
-    call ushitapunikiakun#set_ushitapunikiakun()
+    call ushitapunikiakun#set_ushitapunikiakun(line('.'))
     return
   endif
 
