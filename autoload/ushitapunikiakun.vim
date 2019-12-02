@@ -1,7 +1,7 @@
 scriptencoding utf-8
 
 " no reload
-if !exists('g:loaded_air')
+if !exists('g:loaded_ushitapunikiakun')
   finish
 endif
 let g:ushitapunikiakun#insert_char = '　'

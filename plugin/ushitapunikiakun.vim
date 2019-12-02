@@ -1,10 +1,10 @@
 scriptencoding utf-8
 
 " no reload
-if exists('g:loaded_air')
+if exists('g:loaded_ushitapunikiakun')
   finish
 endif
-let g:loaded_air = 1
+let g:loaded_ushitapunikiakun = 1
 
 "user settings invalid
 let s:save_cpo = &cpo
