@@ -4,7 +4,6 @@ scriptencoding utf-8
 if !exists('g:loaded_ushitapunikiakun')
   finish
 endif
-let g:ushitapunikiakun#insert_char = '　'
 
 "user settings invalid
 let s:save_cpo = &cpo
