@@ -10,7 +10,6 @@ let s:save_cpo = &cpo
 set cpo&vim
 
 " script
-
 function! ushitapunikiakun#set_ushitapunikiakun(lnum) abort
   call setline(a:lnum, 'う　し　た　ぷ　に　き　あ　く　ん　笑')
 endfunction
@@ -22,8 +21,7 @@ function! ushitapunikiakun#run() abort
     return
   endif
 
-  let l:line = substitute(l:line, '\(.\)', '\1' . g:ushitapunikiakun#insert_char, 'g')
-  call setline(line('.'), l:line)
+  s/\(.\)/\=submatch(1) . g:ushitapunikiakun#insert_char/g
 endfunction
 
 function! ushitapunikiakun#all() abort
