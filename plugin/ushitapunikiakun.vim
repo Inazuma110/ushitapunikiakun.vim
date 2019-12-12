@@ -10,9 +10,11 @@ let g:loaded_ushitapunikiakun = 1
 let s:save_cpo = &cpo
 set cpo&vim
 
-let g:ushitapunikiakun#insert_char =
-      \ exists('g:ushitapunikiakun#insert_char') ?
-      \ g:ushitapunikiakun#insert_char : '　'
+" let g:ushitapunikiakun#insert_char =
+"      \ exists('g:ushitapunikiakun#insert_char') ?
+"      \ g:ushitapunikiakun#insert_char : '　'
+"
+let g:ushitapunikiakun#insert_char = get(g:,  'ushitapunikiakun#insert_char', '　')
 
 " script
 command! Ushitapunikiakun call ushitapunikiakun#run()
