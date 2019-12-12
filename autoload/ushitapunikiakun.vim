@@ -11,7 +11,7 @@ set cpo&vim
 
 " script
 function! ushitapunikiakun#set_ushitapunikiakun(lnum) abort
-  call setline(a:lnum, 'う　し　た　ぷ　に　き　あ　く　ん　笑')
+  call setline(a:lnum, g:ushitapunikiakun#empty_str)
 endfunction
 
 function! ushitapunikiakun#run() abort
@@ -21,7 +21,7 @@ function! ushitapunikiakun#run() abort
     return
   endif
 
-  s/\(.\)/\=submatch(1) . g:ushitapunikiakun#insert_char/g
+  s/\(.\)/\=submatch(1) . g:ushitapunikiakun#insert_str/g
 endfunction
 
 function! ushitapunikiakun#all() abort
@@ -31,7 +31,7 @@ function! ushitapunikiakun#all() abort
     return
   endif
 
-  %s/\(.\)/\=submatch(1) . g:ushitapunikiakun#insert_char/g
+  %s/\(.\)/\=submatch(1) . g:ushitapunikiakun#insert_str/g
 endfunction
 
 " user setting valid
