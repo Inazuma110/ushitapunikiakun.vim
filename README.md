@@ -15,10 +15,10 @@ repo = 'Inazuma110/ushitapunikiakun.vim'
 
 ## Configure
 Default, this plugin insert '　'(full width space).
-You can configure this char.
+You can configure this string.
 ```vim
 " Insert this variable. For example,
-let g:ushitapunikiakun#insert_char = '🤔'
+let g:ushitapunikiakun#insert_str = '🐮'
 ```
 
 ## FAQ

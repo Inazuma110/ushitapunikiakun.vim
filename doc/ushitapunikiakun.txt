@@ -16,31 +16,38 @@ INTRODUCTION					*ushitapunikiakun-introduction*
 
 *ushitapunikiakun.vim* is inspired competitive programmers tweet.
 This plugin insert *full width* space between current buffer's string.
-You can configure insert char. Please check.
+You can configure insert character. Please check.
 
 
 ==============================================================================
 CONFIGURE					*ushitapunikiakun-configure*
 
-						*g:ushitapunikiakun#insert_char*
-g:ushitapunikiakun#insert_char
+						*g:ushitapunikiakun#insert_str*
+g:ushitapunikiakun#insert_str
 		ushitapunikiakun.vim insert this variable between string. You
 		can configure this variable.
-		Note: This variable default is full width space.('　')
+		Note: This variable's default is full width space.('　')
+
+						*g:ushitapunikiakun#empty_str*
+g:ushitapunikiakun#empty_str
+		ushitapunikiakun#run and ushitapunikiakun#all insert this
+		variable if current line is empty.
+		Note: This variable's default is
+		'う　し　た　ぷ　に　き　あ　く　ん　笑'.
 
 ==============================================================================
 FUNCTION					*ushitapunikiakun-function*
 
 						*ushitapunikiakun#run()*
 ushitapunikiakun#run()
-		Insert g:ushitapunikiakun#insert_char (default is full width
+		Insert g:ushitapunikiakun#insert_str (default is full width
 		space) between current line string.
 		Note: If string is empty, insert
 		'う　し　た　ぷ　に　き　あ　く　ん　笑' on current line.
 
 						*ushitapunikiakun#all()*
 ushitapunikiakun#all()
-		Insert g:ushitapunikiakun#insert_char (default is full width
+		Insert g:ushitapunikiakun#insert_str (default is full width
 		space) between current buffer string.
 		Note: If string is empty, insert
 		'う　し　た　ぷ　に　き　あ　く　ん　笑' on current buffer.
@@ -57,8 +64,8 @@ Q. 「う　し　た　ぷ　に　き　あ　く　ん　笑　っ　て　�
 A. 「知　り　ま　せ　ん　笑」
 
 In English:
-Q. What is "ushitapunikiakunwarai"?
-A. I don't know.
+Q. What is "ushitapunikiakun lol"?
+A. I don't know lol.
 
 Please check this link for details. https://togetter.com/li/1412567
 
